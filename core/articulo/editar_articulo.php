@@ -124,7 +124,7 @@
 			$enlace = str_shuffle('abcdefghijklmnopqrs');
 			$this->contenido = $this->conexion->real_escape_string($this->contenido);
 			$this->categoria = $this->conexion->real_escape_string($this->categoria);
-			$this->conexion->query("UPDATE publicaciones SET imagen = 'img/$this->nombre_imagen', contenido = '$this->contenido', categoria_id = '$this->categoria' LIMIT 1");
+			$this->conexion->query("UPDATE publicaciones SET imagen = 'img/$this->nombre_imagen', contenido = '$this->contenido', categoria_id = '$this->categoria' WHERE id = '$this->id' LIMIT 1");
 			$this->desconectarse();
 		}
 

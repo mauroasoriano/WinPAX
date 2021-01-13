@@ -28,10 +28,12 @@
 		$datos_publicacion['fecha_creado'] = $registro['fecha_creado'];
 	}
 	unset($usuario);
-	$conexion->conectarse();
-	$rango_objeto = $conexion->conexion->query("SELECT rango FROM usuarios WHERE id = '$_SESSION[id]'");
-	$conexion->desconectarse();
-	$rango_usuario_logeado = $rango_objeto->fetch_assoc();
+	if (isset($_SESSION['id'])) {
+		$conexion->conectarse();
+		$rango_objeto = $conexion->conexion->query("SELECT rango FROM usuarios WHERE id = '$_SESSION[id]'");
+		$conexion->desconectarse();
+		$rango_usuario_logeado = $rango_objeto->fetch_assoc();
+	}
 ?>
 <!DOCTYPE html>
 <html lang="es">

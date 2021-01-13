@@ -29,7 +29,7 @@
 
 		public function eliminar_imagen()
 		{
-				unlink('../../'.$path_imagen['imagen']);
+				unlink('../../'.$this->path_imagen);
 		}
 
 		public function eliminar_articulo()
