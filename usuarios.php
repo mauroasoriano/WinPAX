@@ -32,7 +32,7 @@
 	<table class="table table-striped">
 	  <thead>
 	    <tr>
-	      <th scope="col"><p class="text-center">usuario</p></th>w
+	      <th scope="col"><p class="text-center">usuario</p></th>
 	      <th scope="col"><p class="text-center">rango</p></th>
 	    </tr>
 	  </thead>
